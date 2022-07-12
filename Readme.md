@@ -1,1 +1,1 @@
-All programsare in LONGSUBSTRING directory 
+All programs are in LONGSUBSTRING directory 
