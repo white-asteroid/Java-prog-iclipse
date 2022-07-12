@@ -1,0 +1,35 @@
+package longestSubstring;
+
+import java.util.Arrays;
+
+public class EquilibriumArray {
+
+	 public static int pivotIndex(int[] arr) {
+		 int i = 0,j=arr.length-1,si=0,sj,sa=0;
+		 for(int k = 0;k<arr.length;k++)
+			 sa+=arr[k];
+		 sa/=2;
+		 while(i<j)
+		 {
+			 if((si+arr[i+1]/2) < sa)
+			 {	
+				 si+=arr[i];
+				 i++;
+			 }
+			 else if((si+arr[i+1]/2) == sa )
+			 {
+				 return i+1;
+			 }
+		 }
+			 
+		 return -1;
+	        
+	    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {-1,-1,-1,-1,-1,0};
+		 System.out.println(Arrays.toString(arr));
+		System.out.println(pivotIndex(arr));
+	}
+
+}

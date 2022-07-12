@@ -1,0 +1,36 @@
+package longestSubstring;
+
+import java.util.Arrays;
+
+public class BubbleRec {
+	public static void BubbleRecFun (int[] arr, int s,int e)
+	{
+		if(e==0)
+			return;
+		else if(s<e)
+		{
+			if(s<e)
+			{
+				if(arr[s]>arr[s+1])
+				{
+					int temp = arr[s];
+					arr[s] = arr[s+1];
+					arr[s+1] =temp;
+				}
+				BubbleRecFun(arr,++s,e);
+				
+			}
+			else {
+				BubbleRecFun(arr,0,--e);
+			}
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {-1,-9,-1,-4,-1,100};
+		System.out.println(Arrays.toString(arr));
+		BubbleRecFun(arr,0,arr.length-1);
+		System.out.println(Arrays.toString(arr));
+	}
+
+}

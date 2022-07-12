@@ -1,0 +1,31 @@
+package longestSubstring;
+
+import java.util.Arrays;
+
+public class SubSetRec {
+	static String[] s;
+	public static void SubSetRecFun(String str , String s,int i){
+		if(str=="")
+		{	
+			System.out.println(s);
+//			res[i]=s;
+			return;
+		}
+//		String[] s = ;
+		SubSetRecFun(str.substring(1),s+str.charAt(0),i++);
+		
+		SubSetRecFun(str.substring(1),s,i++);
+		
+		
+//		return s;
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "abc";
+		SubSetRecFun(str,"",0);
+		System.out.println("XXX");
+
+	}
+
+}

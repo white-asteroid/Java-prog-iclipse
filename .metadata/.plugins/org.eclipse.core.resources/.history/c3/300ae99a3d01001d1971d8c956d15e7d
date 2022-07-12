@@ -1,0 +1,59 @@
+package longestSubstring;
+
+import java.util.Arrays;
+
+public class MergeSortRec {
+	public static void MergeIt(int[] arr,int s,int mid, int e)
+	{
+		int[] mix = new int[e-s+1];
+		int i = s , j= mid+1;
+		int k = 0;
+		while(i <= mid && j<=e) {
+			if(arr[i]<arr[j])
+			{
+				mix[k]=arr[i];
+				i++;
+			}
+			else {
+				mix[k]=arr[j];
+				j++;
+			}
+			k++;
+			
+		}
+		while(i <= mid) {
+			mix[k]= arr[i];
+			i++;k++;
+		}
+		while(j <= e) {
+			mix[k]= arr[j];
+			j++;k++;
+		}
+		for(int l = 0;l<mix.length;i++)
+			arr[s+l] = mix[l];
+		
+	}
+	public static void MergeSortRecFun(int[] arr, int s , int e)
+	{
+		
+//		if(mid == s) {
+		
+		if((e-s) == 0 ) {
+			return;
+		}
+		int mid = s+(e-s)/2;
+		System.out.println("S : "+s +" e : "+e);
+		MergeSortRecFun(arr,s,mid);
+		MergeSortRecFun(arr,mid+1,e);
+		MergeIt(arr,s,mid,e);
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {5,4,3,2,1,0};
+		System.out.println(Arrays.toString(arr));
+		MergeSortRecFun(arr,0,arr.length-1);
+		System.out.println(Arrays.toString(arr));
+	}
+
+}
