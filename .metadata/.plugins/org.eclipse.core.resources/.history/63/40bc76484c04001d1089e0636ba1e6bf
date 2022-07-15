@@ -1,0 +1,10 @@
+package All_LOCAL_JavaProgs;
+
+public class PermuatationString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

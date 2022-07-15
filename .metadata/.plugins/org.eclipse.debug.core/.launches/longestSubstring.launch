@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/longestSubstring/src/longestSubstring/longestSubstring.java"/>
+        <listEntry value="/longestSubstring/src/all_LOCAL_JavaProgs/longestSubstring.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="longestSubstring.longestSubstring"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="all_LOCAL_JavaProgs.longestSubstring"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="longestSubstring"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="longestSubstring"/>
 </launchConfiguration>
