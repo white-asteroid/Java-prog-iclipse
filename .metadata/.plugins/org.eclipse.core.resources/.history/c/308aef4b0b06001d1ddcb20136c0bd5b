@@ -89,6 +89,10 @@ public class NQueens {
 		}
 		
 		int count =0;
+		if(c==mat.length)
+		{
+			NQueensFunRec(r+1,mat,c:0);
+		}
 	
 			if(isSafe(mat,r,c))
 			{
@@ -108,7 +112,7 @@ public class NQueens {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n =4;
+		int n =6;
 		boolean[][] mat = new boolean[n][n];
 		System.out.println(NQueensFun(0,mat));
 

@@ -89,6 +89,10 @@ public class NQueens {
 		}
 		
 		int count =0;
+//		if(c==mat.length)
+//		{
+//			NQueensFunRec(r+1,mat,0);
+//		}
 	
 			if(isSafe(mat,r,c))
 			{
