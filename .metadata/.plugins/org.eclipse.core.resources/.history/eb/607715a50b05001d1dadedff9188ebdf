@@ -1,0 +1,26 @@
+package all_LOCAL_JavaProgs;
+
+import java.util.*;
+
+public class Pad {
+	public static List<String> PadFun(String p,String up){
+		if(up == "") {
+			ArrayList<String> list = new ArrayList<String>();
+			list.add(p);
+			
+			return list;
+			
+		}
+		ArrayList<String> list = new ArrayList<String>();
+		int d = up.charAt(0) - '0'; 
+		// TODO Auto-generated method stub
+				System.out.println(d);
+		
+		return list;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(PadFun("","23"));
+	}
+
+}

@@ -1,0 +1,76 @@
+package all_LOCAL_JavaProgs;
+
+import java.util.Arrays;
+
+public class NQueens {
+	public static boolean isSafe(boolean[][] mat , int r ,int c) {
+		
+		for(int i =0;i<r;i++)
+			if(mat[i][c])
+				return false;
+		int ml = Math.min(r, c);
+		for(int i = 1;i<ml;i++)
+		{
+			if(mat[r-i][c-i])
+			{
+				return false;
+			}
+		}
+		int mr = Math.min(r, mat.length-c-1);
+		for(int i = 1;i<mr;i++)
+		{
+			if(mat[r-i][c+i])
+			{
+				return false;
+			}
+		}
+		
+		
+		return true;
+	}
+	
+	public static int NQueensFun(int r,boolean[][] mat) {
+		if(r==mat.length)
+		{
+			for(boolean[] m1: mat)
+			{
+				for(boolean m2: m1)
+				{
+					if(m2)
+						System.out.print("Q");
+					else
+						System.out.print("X");
+						
+				}
+
+				System.out.println();
+			}
+
+			System.out.println("\n =========== \n");
+
+			return 1;
+
+		}
+		
+		int count =0;
+		
+		for(int c =0;c<mat.length;c++) {
+			if(isSafe(mat,r,c))
+			{
+				mat[r][c] = true;
+				count += NQueensFun(r+1,mat);
+				mat[r][c] = false;
+			}
+		}
+		
+		return count;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		boolean[][] mat = {{false,false,false},{false,false,false},{false,false,false}};
+		System.out.println(NQueensFun(0,mat));
+
+	}
+
+}
